@@ -2,7 +2,7 @@ local exchangeRate = 100 -- $1 = 100 in-game coins
 
 -- Function to send data to Discord
 function sendToDiscord(playerName, amount)
-    local discordWebhook = 'YOUR_DISCORD_WEBHOOK_URL'
+    local discordWebhook = 'YOUR_DISCORD_WEBHOOK_URL' -- Replace with your Discord webhook URL
     local message = string.format('Player **%s** redeemed **%d** in-game coins.', playerName, amount)
 
     PerformHttpRequest(discordWebhook, function(err, text, headers) end, 'POST', json.encode({
